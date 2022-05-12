@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.overlay{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.player-one-display,
+.player-two-display{
+    display: grid;
+    place-items: center;
+}
+
+.inline{
+    display: inline-flex;
+}
+
+.space{
+    padding: 10px;
+}
+
+label,
+.score-player1,
+.score-player2,
+.dice-score-player1,
+.dice-score-player2{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+h1{
+    font-size: 35px;
+    font-style: italic;
+}
+
+.dice-1,
+.dice-2,
+.dice-3,
+.dice-4,
+.dice-5,
+.dice-6,
+.dice-7,
+.dice-8,
+.dice-9,
+.dice-10{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(100, 100, 100);
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    border-radius: 10px;
+}
+
+.roll-dice-player1,
+.roll-dice-player2{
+    border: none;
+    background-color: rgb(100, 100, 100);
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    font-weight: 800;
+    font-size: 17px;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+.center{
+    display: grid;
+    place-items: center;
+    padding-top: 100px;
+}
+
+.new-game,
+.play-again{
+    border: none;
+    padding: 15px;
+    background-color: rgb(100, 100, 100);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-weight: 800;
+    font-family: sans-serif;
+    font-size: 17px;
+}
