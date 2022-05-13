@@ -28,14 +28,16 @@ label,
 .score-player2,
 .dice-score-player1,
 .dice-score-player2{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: sans-serif;
-    font-size: 20px;
+    font-family: 'Bowlby One SC', cursive;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-style: italic;
 }
 
 h1{
-    font-size: 35px;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 45px;
     font-style: italic;
 }
 
@@ -49,12 +51,13 @@ h1{
 .dice-8,
 .dice-9,
 .dice-10{
+    font-family: 'Bungee', cursive;
     width: 50px;
     height: 50px;
     text-align: center;
     background-color: rgb(100, 100, 100);
     color: rgb(255, 255, 255);
-    font-size: 32px;
+    font-size: 34px;
     border-radius: 10px;
 }
 
@@ -66,24 +69,30 @@ h1{
     padding: 15px;
     font-weight: 800;
     font-size: 17px;
-    font-family: sans-serif;
+    font-family: 'Bungee', cursive;
     border-radius: 10px;
 }
 
 .center{
     display: grid;
     place-items: center;
-    padding-top: 100px;
+    padding-top: 50px;
+}
+
+.winner{
+    font-family: 'Bowlby One SC', cursive;
+    font-style: italic;
+    font-size: 30px;
 }
 
 .new-game,
 .play-again{
     border: none;
     padding: 15px;
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(220, 20, 60);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     font-weight: 800;
-    font-family: sans-serif;
+    font-family: 'Bungee', cursive;
     font-size: 17px;
 }
