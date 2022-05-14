@@ -96,3 +96,9 @@ h1{
     font-family: 'Bungee', cursive;
     font-size: 17px;
 }
+
+@media (max-width: 767px) {
+    .title-player2{
+        padding-top: 100px;
+    }
+}
