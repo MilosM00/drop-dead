@@ -22,3 +22,63 @@ const buttonNewGame = document.querySelector(`.new-game`);
 const buttonPlayAgain = document.querySelector(`.play-again`);
 
 
+let q = 0;
+let w = 0;
+let e = 0;
+let r = 0;
+let t = 0;
+
+rollDicePlayerOne.addEventListener(`click`, () =>{
+    setTimeout(() => {
+
+        rollDiceFunctionOne();
+
+    }, 1000);
+});
+
+rollDicePlayerTwo.addEventListener(`click`, () =>{
+
+});
+
+
+const rollDiceFunctionOne = () =>{
+    if(diceOne.textContent !== `5` && diceOne.textContent !== `2`){
+        diceOne.textContent = Math.trunc(Math.random() * 6) + 1;
+            
+        if(diceOne.textContent !== `5` && diceOne.textContent !== `2`){
+            q = q + Number(diceOne.textContent);
+        }
+    }
+    
+    if(diceTwo.textContent !== `5` && diceTwo.textContent !== `2`){
+        diceTwo.textContent = Math.trunc(Math.random() * 6) + 1;
+        
+        if(diceTwo.textContent !== `5` && diceTwo.textContent !== `2`){
+            w = w + Number(diceTwo.textContent);
+        }
+    }
+    
+    if(diceThree.textContent !== `5` && diceThree.textContent !== `2`){
+        diceThree.textContent = Math.trunc(Math.random() * 6) + 1;
+        
+        if(diceThree.textContent !== `5` && diceThree.textContent !== `2`){
+            e = e + Number(diceThree.textContent);
+        }
+    }
+    
+    if(diceFour.textContent !== `5` && diceFour.textContent !== `2`){
+        diceFour.textContent = Math.trunc(Math.random() * 6) + 1;
+        
+        if(diceFour.textContent !== `5` && diceFour.textContent !== `2`){
+            r = r + Number(diceFour.textContent);
+        }
+    }
+    
+    if(diceFive.textContent !== `5` && diceFive.textContent !== `2`){
+        diceFive.textContent = Math.trunc(Math.random() * 6) + 1;
+        
+        if(diceFive.textContent !== `5` && diceFive.textContent !== `2`){
+            t = t + Number(diceFive.textContent);
+        }
+    }
+};
