@@ -28,6 +28,12 @@ let e = 0;
 let r = 0;
 let t = 0;
 
+let a = 0;
+let s = 0;
+let d = 0;
+let f = 0;
+let g = 0;
+
 rollDicePlayerOne.addEventListener(`click`, () =>{
     setTimeout(() => {
 
@@ -37,7 +43,11 @@ rollDicePlayerOne.addEventListener(`click`, () =>{
 });
 
 rollDicePlayerTwo.addEventListener(`click`, () =>{
+    setTimeout(() => {
+        
+        rollDiceFunctionTwo();
 
+    }, 1000);
 });
 
 
@@ -79,6 +89,48 @@ const rollDiceFunctionOne = () =>{
         
         if(diceFive.textContent !== `5` && diceFive.textContent !== `2`){
             t = t + Number(diceFive.textContent);
+        }
+    }
+};
+
+const rollDiceFunctionTwo = () =>{
+    if(diceSix.textContent !== `5` && diceSix.textContent !== `2`){
+        diceSix.textContent = Math.trunc(Math.random() * 6) + 1;
+            
+        if(diceSix.textContent !== `5` && diceSix.textContent !== `2`){
+            a = a + Number(diceSix.textContent);
+        }
+    }
+    
+    if(diceSeven.textContent !== `5` && diceSeven.textContent !== `2`){
+        diceSeven.textContent = Math.trunc(Math.random() * 6) + 1;
+        
+        if(diceSeven.textContent !== `5` && diceSeven.textContent !== `2`){
+            s = s + Number(diceSeven.textContent);
+        }
+    }
+    
+    if(diceEight.textContent !== `5` && diceEight.textContent !== `2`){
+        diceEight.textContent = Math.trunc(Math.random() * 6) + 1;
+        
+        if(diceEight.textContent !== `5` && diceEight.textContent !== `2`){
+            d = d + Number(diceEight.textContent);
+        }
+    }
+    
+    if(diceNine.textContent !== `5` && diceNine.textContent !== `2`){
+        diceNine.textContent = Math.trunc(Math.random() * 6) + 1;
+        
+        if(diceNine.textContent !== `5` && diceNine.textContent !== `2`){
+            f = f + Number(diceNine.textContent);
+        }
+    }
+    
+    if(diceTen.textContent !== `5` && diceTen.textContent !== `2`){
+        diceTen.textContent = Math.trunc(Math.random() * 6) + 1;
+        
+        if(diceTen.textContent !== `5` && diceTen.textContent !== `2`){
+            g = g + Number(diceTen.textContent);
         }
     }
 };
