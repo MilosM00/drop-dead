@@ -34,20 +34,66 @@ let d = 0;
 let f = 0;
 let g = 0;
 
+let p = 0;
+let n = 0;
+
+let playingOne = true;
+let playingTwo = true;
+let clickAgain = true;
+
+
 rollDicePlayerOne.addEventListener(`click`, () =>{
     setTimeout(() => {
 
-        rollDiceFunctionOne();
+        if(playingOne === true){
+            rollDiceFunctionOne();
+            isPlayingOne();
+        }
 
-    }, 1000);
+        if(clickAgain === true){
+            selectWinner();
+        }
+
+    }, 500);
 });
 
 rollDicePlayerTwo.addEventListener(`click`, () =>{
     setTimeout(() => {
-        
-        rollDiceFunctionTwo();
 
-    }, 1000);
+        if(playingTwo === true){
+            rollDiceFunctionTwo();
+            isPlayingTwo();
+        }
+
+        if(clickAgain === true){
+            selectWinner();
+        }
+
+    }, 500);
+});
+
+buttonPlayAgain.addEventListener(`click`, () =>{
+    q = w = e = r = t = a = s = d = f = g = 0;
+    winnerIs.textContent = `Who will win?`;
+    diceScorePlayerOne.textContent = `0`;
+    diceScorePlayerTwo.textContent = `0`;
+    playingOne = true;
+    playingTwo = true;
+    clickAgain = true;
+    resetDice();
+});
+
+buttonNewGame.addEventListener(`click`, () =>{
+    q = w = e = r = t = a = s = d = f = g = n = p = 0;
+    winnerIs.textContent = `Who will win?`;
+    diceScorePlayerOne.textContent = `0`;
+    diceScorePlayerTwo.textContent = `0`;
+    scorePlayerOne.textContent = `0`;
+    scorePlayerTwo.textContent = `0`;
+    playingOne = true;
+    playingTwo = true;
+    clickAgain = true;
+    resetDice();
 });
 
 
@@ -91,6 +137,9 @@ const rollDiceFunctionOne = () =>{
             t = t + Number(diceFive.textContent);
         }
     }
+
+    diceScorePlayerOne.textContent = q + w + e + r + t;
+
 };
 
 const rollDiceFunctionTwo = () =>{
@@ -133,4 +182,70 @@ const rollDiceFunctionTwo = () =>{
             g = g + Number(diceTen.textContent);
         }
     }
+
+    diceScorePlayerTwo.textContent = a + s + d + f + g;
+};
+
+const selectWinner = () =>{
+    if(playingOne === false && playingTwo === false){
+        if(Number(diceScorePlayerOne.textContent) > Number(diceScorePlayerTwo.textContent)){
+            winnerIs.textContent = `Player 1 wins!`;
+            p++;
+            scorePlayerOne.textContent = p;
+        }
+
+        else if(Number(diceScorePlayerTwo.textContent) > Number(diceScorePlayerOne.textContent)){
+            winnerIs.textContent = `Player 2 wins!`;
+            n++;
+            scorePlayerTwo.textContent = n;
+        }
+
+        else{
+            winnerIs.textContent = `It's a draw!`;
+        }
+
+        clickAgain = false;
+    }
+};
+
+const isPlayingOne = () =>{
+    if(diceOne.textContent === `5` || diceOne.textContent === `2`){
+        if(diceTwo.textContent === `5` || diceTwo.textContent === `2`){
+            if(diceThree.textContent === `5` || diceThree.textContent === `2`){
+                if(diceFour.textContent === `5` || diceFour.textContent === `2`){
+                    if(diceFive.textContent === `5` || diceFive.textContent === `2`){
+                        playingOne = false;
+                    }
+                }
+            }
+        }
+    }
+};
+
+const isPlayingTwo = () =>{
+    if(diceSix.textContent === `5` || diceSix.textContent === `2`){
+        if(diceSeven.textContent === `5` || diceSeven.textContent === `2`){
+            if(diceEight.textContent === `5` || diceEight.textContent === `2`){
+                if(diceNine.textContent === `5` || diceNine.textContent === `2`){
+                    if(diceTen.textContent === `5` || diceTen.textContent === `2`){
+                        playingTwo = false;
+                    }
+                }
+            }
+        }
+    }
+};
+
+const resetDice = () =>{
+    diceOne.textContent = `◆`;
+    diceTwo.textContent = `◆`;
+    diceThree.textContent = `◆`;
+    diceFour.textContent = `◆`;
+    diceFive.textContent = `◆`;
+
+    diceSix.textContent = `◆`;
+    diceSeven.textContent = `◆`;
+    diceEight.textContent = `◆`;
+    diceNine.textContent = `◆`;
+    diceTen.textContent = `◆`;
 };
